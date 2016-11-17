@@ -5,14 +5,14 @@ function initMap() {//name has to be initMap since that was passed in the google
 
 	var chosenMarker = getCookieData('chosenMarker').split(', '); chosenMarker = {lat: parseFloat(chosenMarker[0]), lng: parseFloat(chosenMarker[1])};//the chosen place
 
-	/**var mapCenter = (usrCoors ? {lat: usrLoc.x, lng: usrLoc.y} : chosenMarker);**/
+	/**var mapCenter = (usrCoors ? {lat: usrLoc.x, lng: usrLoc.y} : chosenMarker); **/
     var mapCenter = (usrCoors ? {lat: 45.3854814, lng: -71.9955969} : chosenMarker);
-    
 	var map = new google.maps.Map(document.getElementById('map'), {
 		center: mapCenter,
 		zoom: 14
 	});
 
+    usrcoors=true
 	if(usrCoors)
 		var markers = [{lat: center.x, lng: center.y}, chosenMarker];
 	else
