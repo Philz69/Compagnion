@@ -1,0 +1,52 @@
+<!-- CARD WITH IMAGE ON LEFT SIDE, MUST CHANGE IMAGE IN LINE -->
+
+<div class="col-sm-4">
+	<div class="card btn-flat waves-attach cards" >
+		<aside class ="card-side pull-left card-side-img" style="background-image:url('../images/icons/sherbrooke.jpg'); background-size:cover;">
+		</aside>
+		<div class="card-main ">
+			<div class="card-inner">
+				<p class="card-heading"> Sherbrooke </p>
+				<p class="margin-bottom-lg"> La meileure ville</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- RESTO CARD -->
+
+<div class="col-sm-6">
+	<div class="card btn-flat waves-attach cards" >
+		<aside class ="card-side pull-left card-side-img">
+		</aside>
+		<div class="card-main ">
+				<div class="card-inner">
+					<p class="card-heading"> Été </p>
+					<p class="margin-bottom-lg"> PLACEHOLDER</p>
+				</div>
+				<div class="card-action">
+				<div class ="row" style="padding-left:10px;">
+					<span class="label-green col-sm-3" style="text-align:center; margin:0px 10px;"> DÉJEUNER </span>
+					<span class="label-teal500 col-sm-3" style="text-align:center; margin:0px 10px;"> DINER </span>
+					<span class="label-teal900 col-sm-3" style="text-align:center; margin:0px 10px;"> SOUPER </span>
+				</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<!-- Normal card with icon -->
+
+<div class="col-sm-4">
+	<div class="card btn-flat waves-attach cards">
+		<aside class="card-side pull-left card-side-icon">
+			<img src="../images/icons/montreal.svg" class="card-side-icon-svg" > </img>
+		</aside>
+		<div class="card-main ">
+			<div class="card-inner">
+				<p class="card-heading"> Montreal </p>
+				<p class="margin-bottom-lg"> PLACEHOLDER</p>
+			</div>
+		</div>
+	</div>
+</div> 

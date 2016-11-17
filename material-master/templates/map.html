@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"> 
+			<meta content="IE=edge" http-equiv="X-UA-Compatible">
+				<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+					<title>Résultats</title>
+
+					<!-- js -->
+
+
+					<!-- css -->
+					<link href="../css/base.css" rel="stylesheet">
+						<link href="../css/project.css" rel="stylesheet">
+						<style>
+			#map{
+				width: 75%;
+				height: 400px;
+				margin-right: auto;
+				margin-left: auto;
+				margin-top: 5%;
+				border: 1px solid black;
+			}
+		</style>
+
+							<!-- favicon -->
+							<!-- ... -->
+						</head>
+						<body class="page-brand">
+						<div id="overlay">
+						<div class="progress-circular" style="position:fixed; margin:auto; top:0; left:0; bottom:0; right:0;">
+							<div class="progress-circular-wrapper">
+								<div class="progress-circular-inner">
+									<div class="progress-circular-left">
+										<div class="progress-circular-spinner"></div>
+									</div>
+									<div class="progress-circular-gap"></div>
+									<div class="progress-circular-right">
+										<div class="progress-circular-spinner"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+							<header class="header header-transparent header-waterfall ui-header affix">
+								<ul class="nav nav-list pull-left">
+									<a href="../templates/villes.html"> 
+										<img class="icon icon-lg" src="../images/icons/home.svg" style="height:56px;">
+										</img>
+									</a>
+								</ul>
+								<p class="header-logo margin-left-no" href="">Résultats</p>
+								<ul class="nav nav-list pull-right">
+									<a href="" onclick="history.back()"> 
+										<img class="icon icon-lg" src="../images/icons/back.svg" style="height:56px;">
+										</img>
+									</a>
+								</ul>
+							</header>
+							<nav aria-hidden="true" class="menu" id="ui_menu" tabindex="-1">
+								<div class="menu-scroll">
+									<div class="menu-content">
+										<a class="menu-logo" href="index.html">APP NAME HERE</a>
+										<ul class="nav">
+											<a class="collapsed waves-attach" data-toggle="collapse" href="#ui_menu_javascript">Temporaire</a>
+											<ul class="menu-collapse collapse" id="ui_menu_javascript">
+												<li>
+													<a class="waves-attach" href="ui-affix.html">Temporaire</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<main class="content">
+							<div class="content-header ui-content-header">
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-6 col-lg-push-3 col-sm-10 col-sm-push-1">
+									<section class="content-inner margin-top-no">
+
+									</section>
+								</div>
+							</div>
+							<div class="row">
+								<body>
+									<div id="map"></div>
+								</body>
+							</div>
+						</div>
+					</div>
+				<footer class="ui-footer">
+						<div class="container">
+							<img src="../images/icons/ico.png" style="height:40px; width:40px;"> Compagnion</img>
+						</div>
+				</footer>
+
+				</main>
+				
+				
+
+				<!-- js -->
+				<script src="../js/jquery-2.2.3.min.js"></script>
+				<script src="../js/base.js"></script>
+				<script src="../js/project.js"></script>
+				<script src="../js/results.js"></script>
+				<script src="../js/geolocalisation.js"></script>
+				<script src="../js/map.js"></script>
+		        <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlEyZEkjcdbC5Vux34DDuIOnAAiBJi11U&callback=initMap";></script>
+							
+								<div id="google_translate_element" style="position:absolute; bottom:0px; right:0px;"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			</body>
+		</html>

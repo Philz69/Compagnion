@@ -1,0 +1,38 @@
+<div class="col-sm-6">
+					<div class="card ">
+						<aside class="card-side pull-left card-side-img">
+						</aside>
+						<div class="card-main ">
+								<div class="card-inner">
+									<p class="card-heading"> Restaurents Coût </p>
+									    <div class="row">
+									        <div class="col-sm-7">
+									             <input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value)">
+									        </div>
+									             <div class="col-sm-1">
+                                            <span id="range">0</span>
+                                         </div>
+										 </div>
+									   <div class="checkbox checkbox-adv col-sm-4">
+										<label for="dejeuner">
+											<input class="access-hide" id="dejeuner" type="checkbox">Déjeuner
+											<span class="checkbox-circle"></span><span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
+										</label>
+									</div>
+									<div class="checkbox checkbox-adv col-sm-4">
+										<label for="dinner">
+											<input class="access-hide" id="dinner" type="checkbox">Dinner
+											<span class="checkbox-circle"></span><span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
+										</label>
+									</div>
+									<div class="checkbox checkbox-adv  col-sm-4">
+										<label for="souper">
+											<input class="access-hide" id="souper" type="checkbox">Souper
+											<span class="checkbox-circle"></span><span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
+										</label>
+									</div>
+								</div>
+								
+						</div>
+					</div>
+				</div>
