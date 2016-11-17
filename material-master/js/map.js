@@ -85,7 +85,7 @@ function updateRoute(travelmode){
 }
 
 function showInfo(){
-$(map).append('<div class="btn-group" style="width: fit-content; margin: auto;">\
+$('map').append('<div class="btn-group" style="width: fit-content; margin: auto;">\
 <button type="button" class="btn btn-primary active" style="margin: auto;" id="transitbus"  onclick="updateRoute(google.maps.TravelMode.TRANSIT)">\
   <img src="../images/icons/bus.svg">\
 </button>\
