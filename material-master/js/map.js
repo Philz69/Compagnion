@@ -14,7 +14,7 @@ function initMap() {//name has to be initMap since that was passed in the google
 
     usrCoors=true
 	if(usrCoors)
-		var markers = [{lat: center.x, lng: center.y}, chosenMarker];
+		var markers = [{lat: 45.3854814, lng: -71.9955969}, chosenMarker];
 	else
 		markers = [chosenMarker];
 
