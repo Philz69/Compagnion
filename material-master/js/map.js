@@ -31,6 +31,21 @@ function initMap() {//name has to be initMap since that was passed in the google
 	}
 
 	showInfo();
+    $(#'map').append('<div class="btn-group" style="width: fit-content; margin: auto;">\
+<button type="button" class="btn btn-primary active" style="margin: auto;">\
+  <img src="../images/icons/bus.svg">\
+</button>\
+<button type="button" class="btn btn-primary" style="margin: auto;" >\
+  <img src="../images/icons/car.svg">\
+  </button>\
+<button type="button" class="btn btn-primary" style="margin: auto;">\
+<img src="../images/icons/bike.svg">\
+</button>\
+<button type="button" class="btn btn-primary" style="margin: auto;">\
+<img src="../images/icons/walk.svg">\
+</button>\
+</div>')
+    
 }
 
 function addMarkers(latLngs, map){
