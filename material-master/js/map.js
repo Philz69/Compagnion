@@ -12,7 +12,7 @@ function initMap() {//name has to be initMap since that was passed in the google
 		zoom: 14
 	});
 
-    usrcoors=true
+    usrCoors=true
 	if(usrCoors)
 		var markers = [{lat: center.x, lng: center.y}, chosenMarker];
 	else
