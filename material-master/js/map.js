@@ -18,7 +18,7 @@ function initMap() {//name has to be initMap since that was passed in the google
 	else
 		markers = [chosenMarker];
 
-	//console.log(markers)
+	console.log(markers)
 	addMarkers(markers, map);
 	//addMarkers(getCookieData('chosenMarker'), map);
 	//document.cookie = 'chosenMarker=; expires=Thu, 01 Jan 1970 00:00:00 UTC';
