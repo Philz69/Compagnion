@@ -5,7 +5,9 @@ function initMap() {//name has to be initMap since that was passed in the google
 
 	var chosenMarker = getCookieData('chosenMarker').split(', '); chosenMarker = {lat: parseFloat(chosenMarker[0]), lng: parseFloat(chosenMarker[1])};//the chosen place
 
-	var mapCenter = (usrCoors ? {lat: usrLoc.x, lng: usrLoc.y} : chosenMarker);
+	/**var mapCenter = (usrCoors ? {lat: usrLoc.x, lng: usrLoc.y} : chosenMarker);**/
+    var mapCenter = (usrCoors ? {lat: 45.3854814, lng: -71.9955969} : chosenMarker);
+    
 	var map = new google.maps.Map(document.getElementById('map'), {
 		center: mapCenter,
 		zoom: 14
@@ -73,18 +75,27 @@ function drawRoute(request, map){
   	});
 }
 
+function updateRoute(travelmode){
+        var request = {
+			origin: markers[0],
+			destination: markers[1],
+			travelMode: travelmode
+		};
+        drawRoute(request, map);
+}
+
 function showInfo(){
 $(map).append('<div class="btn-group" style="width: fit-content; margin: auto;">\
-<button type="button" class="btn btn-primary active" style="margin: auto;" id="transitbus">\
+<button type="button" class="btn btn-primary active" style="margin: auto;" id="transitbus"  onclick="updateRoute(google.maps.TravelMode.TRANSIT)">\
   <img src="../images/icons/bus.svg">\
 </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;" id="transitcar" >\
+<button type="button" class="btn btn-primary" style="margin: auto;" id="transitcar" onclick="updateRoute(google.maps.TravelMode.DRIVING)">\
   <img src="../images/icons/car.svg">\
   </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;" id="transitbike">\
+<button type="button" class="btn btn-primary" style="margin: auto;" id="transitbike" onclick="updateRoute(google.maps.TravelMode.BICYCLING)">\
 <img src="../images/icons/bike.svg">\
 </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;" id="transitwalk">\
+<button type="button" class="btn btn-primary" style="margin: auto;" id="transitwalk" onclick="updateRoute(google.maps.TravelMode.WALKING)">\
 <img src="../images/icons/walk.svg">\
 </button>\
 </div>');
