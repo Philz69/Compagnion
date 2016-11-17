@@ -3,11 +3,11 @@ function initMap() {//name has to be initMap since that was passed in the google
 	var usrCoors = true;
 	try{usrLoc = JSON.parse(center); }catch(error){usrCoors = false};//check if geolocated
 
-	chosenMarker = getCookieData('chosenMarker').split(', '); chosenMarker = {lat: parseFloat(chosenMarker[0]), lng: parseFloat(chosenMarker[1])};//the chosen place
+	var chosenMarker = getCookieData('chosenMarker').split(', '); chosenMarker = {lat: parseFloat(chosenMarker[0]), lng: parseFloat(chosenMarker[1])};//the chosen place
 
 	/**var mapCenter = (usrCoors ? {lat: usrLoc.x, lng: usrLoc.y} : chosenMarker); **/
     var mapCenter = {lat: 45.3854814, lng: -71.9955969};
-	map = new google.maps.Map(document.getElementById('map'), {
+	var map = new google.maps.Map(document.getElementById('map'), {
 		center: mapCenter,
 		zoom: 14
 	});
@@ -59,8 +59,8 @@ function addMarkers(latLngs, map){
 }
 
 function drawRoute(request, map){
-	var display = new google.maps.DirectionsRenderer();
-	var service = new google.maps.DirectionsService();
+	display = new google.maps.DirectionsRenderer();
+	service = new google.maps.DirectionsService();
 
 	display.setMap(map);
 
@@ -79,23 +79,30 @@ function updateRoute(travelmode){
         var request = {
 			origin: markers[0],
 			destination: markers[1],
-			travelMode: travelmode
+			travelMode: google.maps.TravelMode[travelmode]
 		};
-        drawRoute(request, map);
+        service.route(request, function(response, status) {
+	    if (status == google.maps.DirectionsStatus.OK) {
+	    	$('#overlay').remove();
+	    	console.log('gfhjgkh')
+	      	display.setDirections(response);
+    	}else{
+    		console.log('nope');
+    	}
 }
 
 function showInfo(){
-$('map').append('<div class="btn-group" style="width: fit-content; margin: auto;">\
-<button type="button" class="btn btn-primary active" style="margin: auto;" id="transitbus"  onclick="updateRoute(google.maps.TravelMode.TRANSIT)">\
+$(map).append('<div class="btn-group" style="width: fit-content; margin: auto;">\
+<button type="button" class="btn btn-primary active" style="margin: auto;" id="transitbus"  onclick="updateRoute(TRANSIT)">\
   <img src="../images/icons/bus.svg">\
 </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;" id="transitcar" onclick="updateRoute(google.maps.TravelMode.DRIVING)">\
+<button type="button" class="btn btn-primary" style="margin: auto;" id="transitcar" onclick="updateRoute(DRIVING)">\
   <img src="../images/icons/car.svg">\
   </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;" id="transitbike" onclick="updateRoute(google.maps.TravelMode.BICYCLING)">\
+<button type="button" class="btn btn-primary" style="margin: auto;" id="transitbike" onclick="updateRoute(BICYCLING)">\
 <img src="../images/icons/bike.svg">\
 </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;" id="transitwalk" onclick="updateRoute(google.maps.TravelMode.WALKING)">\
+<button type="button" class="btn btn-primary" style="margin: auto;" id="transitwalk" onclick="updateRoute(gWALKING)">\
 <img src="../images/icons/walk.svg">\
 </button>\
 </div>');
