@@ -3,18 +3,18 @@ function initMap() {//name has to be initMap since that was passed in the google
 	var usrCoors = true;
 	try{usrLoc = JSON.parse(center); }catch(error){usrCoors = false};//check if geolocated
 
-	var chosenMarker = getCookieData('chosenMarker').split(', '); chosenMarker = {lat: parseFloat(chosenMarker[0]), lng: parseFloat(chosenMarker[1])};//the chosen place
+	chosenMarker = getCookieData('chosenMarker').split(', '); chosenMarker = {lat: parseFloat(chosenMarker[0]), lng: parseFloat(chosenMarker[1])};//the chosen place
 
 	/**var mapCenter = (usrCoors ? {lat: usrLoc.x, lng: usrLoc.y} : chosenMarker); **/
     var mapCenter = {lat: 45.3854814, lng: -71.9955969};
-	var map = new google.maps.Map(document.getElementById('map'), {
+	map = new google.maps.Map(document.getElementById('map'), {
 		center: mapCenter,
 		zoom: 14
 	});
 
     usrCoors=true
 	if(usrCoors)
-		var markers = [{lat: 45.3854814, lng: -71.9955969}, chosenMarker];
+		markers = [{lat: 45.3854814, lng: -71.9955969}, chosenMarker];
 	else
 		markers = [chosenMarker];
 
