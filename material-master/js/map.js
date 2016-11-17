@@ -75,16 +75,16 @@ function drawRoute(request, map){
 
 function showInfo(){
 $(map).append('<div class="btn-group" style="width: fit-content; margin: auto;">\
-<button type="button" class="btn btn-primary active" style="margin: auto;">\
+<button type="button" class="btn btn-primary active" style="margin: auto;" id="transitbus">\
   <img src="../images/icons/bus.svg">\
 </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;" >\
+<button type="button" class="btn btn-primary" style="margin: auto; id="transitcar" >\
   <img src="../images/icons/car.svg">\
   </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;">\
+<button type="button" class="btn btn-primary" style="margin: auto;" id="transitbike">\
 <img src="../images/icons/bike.svg">\
 </button>\
-<button type="button" class="btn btn-primary" style="margin: auto;">\
+<button type="button" class="btn btn-primary" style="margin: auto;" id="transitwalk">\
 <img src="../images/icons/walk.svg">\
 </button>\
 </div>');
